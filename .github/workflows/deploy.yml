@@ -11,27 +11,22 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1️⃣ Checkout the code
       - uses: actions/checkout@v4
 
-      # 2️⃣ Set up Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '20.x'
 
-      # 3️⃣ Install dependencies
       - name: Install dependencies
         run: npm install
 
-      # 4️⃣ Build the app if build script exists
       - name: Build app
-        run: npm run build --if-present
+        run: npm run build
 
-      # 5️⃣ Deploy to Azure Web App
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'CALC'  # <- your Azure Web App name
+          app-name: 'CALC'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_7356A303B5C4497688501BEB0C6FE219 }}
-          package: .       # Deploy repo root
+          package: ./dist
