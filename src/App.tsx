@@ -54,7 +54,7 @@ function App() {
           <div className="inline-flex items-center justify-center w-16 h-16 bg-emerald-600 rounded-2xl mb-4 shadow-lg">
             <Calculator className="text-white" size={32} />
           </div>
-          <h1 className="text-4xl font-bold text-gray-900 mb-2">Tip Calculator</h1>
+          <h1 className="text-4xl font-bold text-gray-900 mb-2">Matt's Tip Calculator</h1>
           <p className="text-gray-600 text-lg">Calculate tips and split bills with ease</p>
         </div>
 
