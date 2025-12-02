@@ -18,7 +18,7 @@ jobs:
       - name: Set up Node.js version
         uses: actions/setup-node@v3
         with:
-          node-version: '22.x'
+          node-version: '20.x'
 
       - name: Install and Build
         run: |
@@ -58,3 +58,4 @@ jobs:
           app-name: 'Tip-calcualtor'
           slot-name: 'Production'
           package: dist  # 👈 Deploy ONLY your build output
+
